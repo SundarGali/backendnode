@@ -1,31 +1,31 @@
 {"books": [{
   "id":1,
-  "title": "A game of thrones",
+  "title": "Demo coin one",
   "year": 1996,
   "published": false
 
 },
 {
   "id":2,
-  "title": "A storm of Swords",
+  "title": "Demo coin two",
   "year": 2000,
   "published": true
 },
 {
   "id":3,
-  "title": "A feast for crows",
+  "title": "Demo coin three",
   "year": 2005,
   "published": true
 },
 {
   "id":4,
-  "title": "A dance with Dragons",
+  "title": "Demo coin four",
   "year": 2011,
   "published": true
 },
 {
   "id":5,
-  "title": "the winds of winter",
+  "title": "Demo coin five",
   "year": 2022,
   "published": false
 }]}

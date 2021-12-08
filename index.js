@@ -15,7 +15,17 @@ const mongoose = require("mongoose");
         const mongoose = require('mongoose');
     });
     
+    const coinsschema = mongoose.Schema({
     
+        id: Number,
+        name:String,
+        price:Number,
+        year:Number,
+        inmarket:Boolean,
+        
+        });
+        
+        const coinsdata =mongoose.model('Coin',coinsschema);
     
     
 const server = http.createServer((req, res) => {
@@ -65,17 +75,7 @@ const server = http.createServer((req, res) => {
               );
      }
      else if(req.url==='/add'){
-        const coinsschema = mongoose.Schema({
-    
-            id: Number,
-            name:String,
-            price:Number,
-            year:Number,
-            inmarket:Boolean,
-            
-            });
-            
-            const coinsdata =mongoose.model('Coin',coinsschema);
+        
             
             const data={
                 id:1,

@@ -4,7 +4,7 @@ const fs = require("fs");
 
 
 const mongoose = require("mongoose");
-    const uri = "mongodb+srv://sundar:sundar@cryptofinal.x8ndo.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+    const uri = "mongodb+srv://sundar:sundar@cryptofinal.x8ndo.mongodb.net/CoinsCrpyto?retryWrites=true&w=majority";
     
     mongoose.connect(uri,{
     useNewUrlParser:true,

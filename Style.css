@@ -1,0 +1,942 @@
+:root{
+    --blue: #1e90ff;
+    --white: #0000;
+    --yellowish: #f7c600;
+    --reddis: #f45b69;
+    --myPaddingSize:90px;
+    --mytoppadding:50px;
+    --schoolimage: url('https://images.unsplash.com/photo-1604967941346-f1b8097cf97e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=987&q=80');
+    --schoolimage2: url('https://images.unsplash.com/photo-1579579778611-ac38b712bd4a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80');
+    --mainpage:url('https://images.unsplash.com/photo-1511140973288-19bf21d7e771?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80');
+}
+
+
+.container{
+    background-image: var(--mainpage);
+    background-attachment: fixed;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "header nav nav nav"
+    
+    "main main contentone empty"
+   
+    "sizedboxone sizedboxone sizedboxone sizedboxone"
+    "smallline smallline smallline smallline"
+    "school college masters masterstwo"
+    "sizedboxtwo sizedboxtwo sizedboxtwo sizedboxtwo"
+    
+    "Strategy Synchronize Control UserTraining"
+    "sizedboxthree sizedboxthree sizedboxthree sizedboxthree"
+  
+    "TextExperience TextExperience ImageExperience ImageExperience "
+    "sizedboxfour sizedboxfour sizedboxfour sizedboxfour"
+    "MobileProjects DesignProjects WebProjects WebProjectsone"
+    "sizedboxfive sizedboxfive sizedboxfive sizedboxfive"
+    "TextYoga TextYoga ImageYoga ImageYoga"
+    
+    "footer footer footer endlogoandtext"
+    ;
+    /* grid-gap: 0.3rem; */
+}
+.smallline{
+    height: 10px;
+    width: 100%;
+    background-color: white;
+}
+#ham{
+    visibility: hidden;
+
+}
+html {
+    scroll-behavior: smooth;
+}
+.menumobile {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .menumobile a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .menumobile a:hover {
+    color: #f1f1f1;
+  }
+
+@media only screen and (max-width:500px){
+    
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.4fr 1fr 2.2fr 1.2fr 1.2fr 1.2fr 1.2fr;
+
+        grid-template-areas: "header"
+        "nav"
+        
+        "main"
+        
+       
+        "contentone"
+        "empty"
+        "school"
+        "college"
+        "masters"
+        "masterstwo" 
+        "Strategy"
+        "Synchronize"
+        "Control"
+        "UserTraining"
+        "TextExperience"
+        "ImageExperience"
+        "MobileProjects"
+        "DesignProjects"
+        "WebProjects"
+        "WebProjectsone"
+        "TextYoga"
+        "ImageYoga"
+        "footer"
+        "endlogoandtext"
+
+
+
+       
+        
+        ;
+        /* row-gap: 0.5rem; */
+    }
+    header{
+        display: flex;
+        justify-content: space-between;
+    }
+    nav{
+        visibility: hidden;
+    }
+    #ImageExperience{
+        
+        height: auto;
+    }
+    #ham{
+        padding-right: 10px;
+        padding-top: 30px;
+        visibility: visible;
+    }
+    
+}
+footer{
+    grid-area: footer;
+    text-align: left;
+    padding-top: 50px;
+    height: 350px;
+    background-color: #19191d;
+}
+.sizedboxone{
+    background-image: var(--mainpage);
+    background-attachment: fixed;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100px;
+    width: 100%;
+    grid-area: sizedboxone;
+}
+#sizedboxtwo{
+    background-image: var(--schoolimage2) ;
+    background-attachment: fixed;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50px;
+    width: 100%;
+    grid-area: sizedboxtwo;
+}
+#sizedboxthree{
+    background-image: var(--schoolimage) ;
+    background-attachment: fixed;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    height: 30px;
+    width: 100%;
+    grid-area: sizedboxthree;
+}
+#sizedboxfour{
+    background-image: url('https://image.freepik.com/free-vector/worldwide-connection-gray-background-illustration-vector_53876-61769.jpg');
+    background-attachment: fixed;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100px;
+    width: 100%;
+    grid-area: sizedboxfour;
+}
+#sizedboxfive{
+    background-image: url('https://image.freepik.com/free-vector/worldwide-connection-gray-background-illustration-vector_53876-61769.jpg');
+    background-attachment: fixed;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100px;
+    width: 100%;
+    grid-area: sizedboxfive;
+}
+#sizedboxsix{
+    background-image: url('https://image.freepik.com/free-vector/worldwide-connection-gray-background-illustration-vector_53876-61769.jpg');
+    background-attachment: fixed;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100px;
+    width: 100%;
+    grid-area: sizedboxsix;
+}
+img
+{
+    max-width: 100%;
+    min-width: 300px;
+    height: auto;
+}
+header{
+    padding-left: 10px;
+}
+nav{
+    padding-top: var(--mytoppadding);
+    grid-area:nav;
+    padding-left: var(--myPaddingSize);
+    
+}
+main{
+    background-image: var(--mainpage);
+    background-attachment: fixed;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-area: main;
+    /* display: flex; */
+   
+    
+
+
+}
+article{
+    background-image: var(--mainpage);
+    background-attachment: fixed;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-area: article;
+}
+#contentone{
+    background-image: var(--mainpage);
+    background-attachment: fixed;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-left: 90px;
+    grid-area: contentone;
+}
+
+/* picture{
+    grid-area: picture;display:block;
+    
+} */
+
+
+
+
+
+
+
+
+
+.navigationbar{
+    
+    padding-left: 10px;
+    /* height: 80px; */
+    /* display: flex; */
+   
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+}
+#logoandtext{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#homelink:visited{
+    
+    color:white
+}
+
+#logotext{
+font-size: 28px;
+color:white
+}
+#homelink{
+    color:white;
+    padding-left: var(--myPaddingSize);
+}
+#homelink:hover{
+    text-decoration: none;
+    color: #d70b2d;
+}
+#home{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: inherit;
+    padding-left: 500px;
+    /* flex: 1; */
+    padding: 55px 50px 30px 350px;
+    color:white
+}
+#education{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* flex: 1; */
+    padding: 55px 50px 30px 50px;
+    color:white
+}
+#aboutme{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* flex: 1; */
+    padding: 55px 50px 30px 50px;
+    color: black
+}
+#experience{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* flex: 1; */
+    padding: 55px 50px 30px 50px;
+    color: black
+
+}
+#Projects{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* flex: 1; */
+    padding: 55px 50px 30px 50px;
+    color: black
+
+}
+*{
+    margin: 0;
+    padding: 0;
+  }
+#Blogs{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* flex: 1; */
+    padding: 55px 50px 0px 50px;
+    color:white
+}
+
+
+.HomePage{
+    /* padding-left: 10px; */
+    /* height: 80px; */
+    /* display: flex; */
+   
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+
+}
+
+#FirstDivison{
+    background-color: #fff4ef;
+
+    
+    
+    /* text-align: center; */
+    /* padding-top: 150px; */
+   
+    background-image: var(--mainpage);
+    background-attachment: fixed;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#image{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    text-align: center;
+    /* padding-top: 50px; */
+    /* flex: 1; */
+    
+}
+#Text{
+    /* flex: 1; */
+    padding-top: 25px;
+    padding-left: 50px;
+}
+#Exploreme{
+    color: white;
+    width: 120px;
+    background-color: #d70b2d;
+    height: 50px;
+    text-align: center;
+    border-color: #ff6246;
+
+}
+.Education{
+    /* padding-left: 10px; */
+    height: 300px;
+    /* display: flex; */
+   
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+
+}
+#Seconddivision{
+    text-align: center;
+    padding-top: 150px;
+    /* background-color: #fff8f7; */
+
+    background-image: var(--mainpage);
+    background-attachment: fixed;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#school{
+    background-image: var(--schoolimage2) ;
+    background-attachment: fixed;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    font-style: inherit;
+    /* padding-left: 500px; */
+    /* justify-content: center; */
+    /* flex: 1; */
+    
+    /* align-self: flex-start; */
+    grid-area: school;
+    
+    padding: 25px 0px 0px 50px;
+    color: #d70b2d
+}
+#college{
+    background-image: var(--schoolimage2) ;
+    background-attachment: fixed;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    /* flex: 1; */
+    grid-area:college;
+    /* align-self: flex-start; */
+    padding: 25px 0px 0px 50px;
+    color: #d70b2d
+}
+#masters{
+    background-image: var(--schoolimage2) ;
+    background-attachment: fixed;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* flex: 1; */
+    text-align: center;
+    /* align-self: flex-start; */
+    padding: 25px 0px 0px 50px;
+    color: #d70b2d;
+    grid-area:masters;
+}
+#masterstwo{
+    background-image: var(--schoolimage2) ;
+    background-attachment: fixed;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* flex: 1; */
+    text-align: center;
+    /* align-self: flex-start; */
+    padding: 25px 0px 0px 50px;
+    color: #d70b2d;
+    grid-area:masterstwo;
+}
+#textschooling{
+    padding-top: 20px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#schoolname{
+    padding-top: 8px;
+    color: white;
+    font-family:'Times New Roman', Times, serif;
+}
+#textcollege{
+    padding-top: 20px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#collegename{
+    padding-top: 8px;
+    color: white;
+    font-family:'Times New Roman', Times, serif;
+}
+#textmasters{
+    padding-top: 20px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#mastersname{
+    padding-top: 8px;
+    color: white;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.Aboutme{
+    /* padding-left: 10px; */
+    height: 400px;
+    /* display: flex; */
+   
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+
+}
+#Thirddivision{
+    text-align: center;
+    padding-top: 200px;
+    background-color:white;
+
+    background-image: url('https://images.unsplash.com/photo-1598960087461-556c5a1f864a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80');
+    background-attachment: fixed;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#Strategy{
+    background-image: var(--schoolimage);
+    background-attachment: fixed;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    font-style: inherit;
+    padding-left: 500px;
+    grid-area: Strategy;
+    /* flex: 1; */
+    
+    
+    padding: 25px 50px 0px 50px;
+    color: #d70b2d
+}
+#Synchronize{
+    background-image: var(--schoolimage);
+    background-attachment: fixed;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    grid-area: Synchronize;
+    /* flex: 1; */
+    padding: 25px 50px 0px 50px;
+    color: #d70b2d
+}
+#Control{
+    background-image: var(--schoolimage);
+    background-attachment: fixed;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* flex: 1; */
+    text-align: center;
+    grid-area: Control;
+    padding: 25px 50px 0px 50px;
+    color: #d70b2d
+}
+#UserTraining{
+    background-image: var(--schoolimage);
+    background-attachment: fixed;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* flex: 1; */
+    grid-area: UserTraining;
+    text-align: center;
+    padding: 25px 50px 0px 50px;
+    color: #d70b2d
+}
+#textStrategy{
+    padding-top: 20px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#Strategyname{
+    padding-top: 8px;
+    color: white;
+    font-family:'Times New Roman', Times, serif;
+}
+#textSynchronize{
+    padding-top: 20px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#Synchronizename{
+    padding-top: 8px;
+    color: white;
+    font-family:'Times New Roman', Times, serif;
+}
+#textControl{
+    padding-top: 20px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#Controlname{
+    padding-top: 8px;
+    color: white;
+    font-family:'Times New Roman', Times, serif;
+}
+#textUserTraining{
+    padding-top: 20px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#UserTrainingname{
+    padding-top: 8px;
+    color: white;
+    font-family:'Times New Roman', Times, serif;
+}
+.Experience{
+    /* padding-left: 10px; */
+    /* height: 80px; */
+    /* display: flex; */
+   
+    /* flex-wrap: wrap; */
+    justify-content: space-evenly;
+
+}
+
+#ImageExperience{
+    background-image: url('https://images.unsplash.com/photo-1627405452946-31ce7c7ff785?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* position: relative; */
+    /* text-align: center; */
+    padding-top: 100px;
+    /* text-align: center; */
+    padding-left: 30px;
+    /* width: auto; */
+    /* height: 500px; */
+    grid-area: ImageExperience;
+    /* flex: 1; */
+    padding-right: 50px;
+    padding-bottom: 20px;
+    
+}
+#TextExperience{
+    background-image: url('https://images.unsplash.com/photo-1592832122594-c0c6bad718b1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=987&q=80');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* flex: 1; */
+    /* height: 500px; */
+    padding-top: 25px;
+    grid-area: TextExperience;
+    padding-left: 50px;
+}
+.Desgination{
+    position: absolute;
+   bottom: 500px;
+   left: 165px;
+   font-size: 24px;
+  
+   color: #fff;
+}
+.years-left{
+    position: absolute;
+   bottom: 480px;
+   left: 165px;
+  
+   color: #fff;
+}
+.Company-right{
+    position: absolute;
+   bottom: 450px;
+   left: 165px;
+  
+   color: #fff;
+}
+.demo1-right{
+    position: absolute;
+   bottom: 430px;
+   left: 165px;
+  
+   color: #fff;
+}
+.demo2-right{
+    position: absolute;
+   bottom:410px;
+   left: 165px;
+  
+   color: #fff;
+}
+.demo3-right{
+    position: absolute;
+   bottom: 390px;
+   left: 165px;
+  
+   color: white;
+}
+.demo4-right{
+    position: absolute;
+   bottom: 370px;
+   left: 165px;
+  
+   color: white;
+}
+.demo5-right{
+    position: absolute;
+   bottom: 350px;
+   left: 165px;
+  
+   color: white;
+}
+.demo6-right{
+    position: absolute;
+   bottom: 330px;
+   left: 165px;
+  
+   color: white;
+}
+
+#Fourthdivision{
+    
+    padding-top: 70px;
+    background-color:#f9f9f9;
+
+    background-image: url('https://image.freepik.com/free-vector/worldwide-connection-gray-background-illustration-vector_53876-61769.jpg');
+    background-attachment: fixed;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#overlap{
+    position: absolute;
+    bottom: 0px;
+    left: 140px;
+    /* max-width: 100%; */
+    /* min-width: 300px; */
+    /* height: auto; */
+}
+.Projects{
+    /* padding-left: 10px; */
+    height: 500px;
+    /* display: flex; */
+   
+    /* flex-wrap: wrap; */
+   
+
+}
+#Fifthdivision{
+    text-align: left;
+    padding-top: 50px;
+    background-color:white;
+
+    background-image: url('https://image.freepik.com/free-vector/worldwide-connection-gray-background-illustration-vector_53876-61769.jpg');
+    background-attachment: fixed;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#MobileProjects{
+    background-image: url('https://image.freepik.com/free-vector/worldwide-connection-gray-background-illustration-vector_53876-61769.jpg');
+    background-attachment: fixed;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: left;
+    grid-area: MobileProjects;
+    font-style: inherit;
+    padding-left: 500px;
+   
+    /* flex: 1; */
+    
+    padding: 25px 50px 0px 50px;
+    color: #d70b2d
+}
+#DesignProjects{
+    background-image: url('https://image.freepik.com/free-vector/worldwide-connection-gray-background-illustration-vector_53876-61769.jpg');
+    background-attachment: fixed;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-area: DesignProjects;
+    text-align: justify;
+    /* flex: 1; */
+    padding: 25px 50px 0px 50px;
+    color: #d70b2d
+}
+#WebProjects{
+    background-image: url('https://image.freepik.com/free-vector/worldwide-connection-gray-background-illustration-vector_53876-61769.jpg');
+    background-attachment: fixed;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-area: WebProjects;
+    /* flex: 1; */
+    text-align: justify;
+    padding: 25px 50px 0px 50px;
+    color: #d70b2d
+}
+#WebProjectsone{
+    background-image: url('https://image.freepik.com/free-vector/worldwide-connection-gray-background-illustration-vector_53876-61769.jpg');
+    background-attachment: fixed;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-area: WebProjectsone;
+    /* flex: 1; */
+    text-align: justify;
+    padding: 25px 50px 0px 50px;
+    color: #d70b2d
+}
+#MobileProjectsname{
+    padding-top: 20px;
+}
+#DesignProjectsname{
+    padding-top: 20px;
+}
+#WebProjectsname{
+    padding-top: 20px;
+}
+#SixthDivison{
+    text-align: left;
+    padding-top: 50px;
+    background-color: #f9f9f9;
+
+    background-image: url('https://image.freepik.com/free-vector/worldwide-connection-gray-background-illustration-vector_53876-61769.jpg');
+    background-attachment: fixed;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.Yogapage{
+    /* padding-left: 10px; */
+    /* height: 80px; */
+    /* display: flex; */
+   
+    /* flex-wrap: wrap; */
+    justify-content: space-evenly;
+
+}
+#TextYoga{
+    background-image: url('https://image.freepik.com/free-vector/worldwide-connection-gray-background-illustration-vector_53876-61769.jpg');
+    background-attachment: fixed;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+    padding-left: 100px;
+    grid-area: TextYoga;
+}
+/* #ImageYoga{
+    image
+} */
+#ImageYoga{
+    background-image: url('https://image.freepik.com/free-vector/worldwide-connection-gray-background-illustration-vector_53876-61769.jpg');
+    background-attachment: fixed;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-left: 50px;
+    
+    grid-area: ImageYoga;
+    /* width: 100%; */
+}
+img{
+    max-width: 100%;
+    min-width: 300px;
+    height: auto;
+}
+.redText{
+    color: black;
+    font-size: 45px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.blackText{
+    color: #d70b2d;
+    font-size: 45px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#LastDivison{
+    text-align: left;
+    padding-top: 50px;
+    height: 350px;
+    background-color: #19191d;
+}
+#Collab{
+    color: #7d7b7f;
+    padding-left: 100px;
+    padding-bottom: 50px;
+}
+#contactdet{
+    justify-content: space-between;
+    color: White;
+    /* display: flex; */
+    font-size: 45px;
+    padding-left: 100px;
+    padding-bottom: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+#demodemotext{
+    justify-content: space-between;
+    color: White;
+    /* display: flex; */
+    padding-left: 100px;
+    
+}
+#endlogoandtext{
+    grid-area: endlogoandtext;
+    /* text-align: right; */
+    padding-top: 100px;
+    font-size: 45px;
+    
+    font-family: 'Yaldevi', sans-serif;
+    /* height: 350px; */
+    background-color: #19191d;
+
+}
+#socialmedia{
+    padding-left: 100px;
+    color: white;
+    /* display: flex; */
+   
+    justify-content: flex-start;
+
+}
+#endlogotext{
+    color: white;
+}
+#instagram{
+    padding-right: 10px;
+   
+}
+#twitter{
+    padding-right: 10px;
+}
+#envelope{
+    padding-right: 10px;
+}
+#linkedin{
+    padding-right: 10px;
+}

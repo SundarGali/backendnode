@@ -16,104 +16,7 @@ const mongoose = require("mongoose");
     });
     
     
-    const coinsschema = mongoose.Schema({
     
-    id: Number,
-    name:String,
-    price:Number,
-    year:Number,
-    inmarket:Boolean,
-    
-    });
-    
-    const coinsdata =mongoose.model('Coin',coinsschema);
-    
-    const data={
-        id:1,
-        name: "Dodge",
-        price: 1000,
-        year:1996,
-        inmarket: false
-    
-    }
-    const data2={
-        id:2,
-        name: "Bodge",
-        price: 3000,
-        year:1976,
-        inmarket: false
-    
-    }
-    const data3={
-        id:3,
-        name: "DEodge",
-        price: 30000,
-        year:2006,
-        inmarket: false
-    
-    }
-    const data4={
-        id:4,
-        name: "DQodge",
-        price: 15000,
-        year:2003,
-        inmarket: false
-    
-    }
-    const data5={
-        id:5,
-        name: "DGodge",
-        price: 12000,
-        year:2004,
-        inmarket: false
-    
-    }
-    const newcoinsdata= new coinsdata(data);
-    const newcoinsdata2= new coinsdata(data2);
-    const newcoinsdata3= new coinsdata(data3);
-    const newcoinsdata4= new coinsdata(data4);
-    const newcoinsdata5= new coinsdata(data5);
-    
-    newcoinsdata.save((error)=>{
-        if (error){
-            console.log('Oops')
-    
-        } else {
-            console.log('Worked')
-        }
-    });
-    newcoinsdata2.save((error)=>{
-        if (error){
-            console.log('Oops')
-    
-        } else {
-            console.log('Worked')
-        }
-    });
-    newcoinsdata3.save((error)=>{
-        if (error){
-            console.log('Oops')
-    
-        } else {
-            console.log('Worked')
-        }
-    });
-    newcoinsdata4.save((error)=>{
-        if (error){
-            console.log('Oops')
-    
-        } else {
-            console.log('Worked')
-        }
-    });
-    newcoinsdata5.save((error)=>{
-        if (error){
-            console.log('Oops')
-    
-        } else {
-            console.log('Worked')
-        }
-    });
     
 const server = http.createServer((req, res) => {
     
@@ -160,6 +63,114 @@ const server = http.createServer((req, res) => {
                                     res.end(content);
                         }
               );
+     }
+     else if(req.url==='/add'){
+        const coinsschema = mongoose.Schema({
+    
+            id: Number,
+            name:String,
+            price:Number,
+            year:Number,
+            inmarket:Boolean,
+            
+            });
+            
+            const coinsdata =mongoose.model('Coin',coinsschema);
+            
+            const data={
+                id:1,
+                name: "Ethereum",
+                price: 4000,
+                year:2015,
+                inmarket: true
+            
+            }
+            const data2={
+                id:2,
+                name: "Litecoin",
+                price: 3000,
+                year:2011,
+                inmarket: false
+            
+            }
+            const data3={
+                id:3,
+                name: "Cardano",
+                price: 2000,
+                year:2006,
+                inmarket: false
+            
+            }
+            const data4={
+                id:4,
+                name: "Polkadot",
+                price: 15000,
+                year:2021,
+                inmarket: false
+            
+            }
+            const data5={
+                id:5,
+                name: "Bitcoin Cash",
+                price: 1000,
+                year:2021,
+                inmarket: false
+            
+            }
+            const newcoinsdata= new coinsdata(data);
+            const newcoinsdata2= new coinsdata(data2);
+            const newcoinsdata3= new coinsdata(data3);
+            const newcoinsdata4= new coinsdata(data4);
+            const newcoinsdata5= new coinsdata(data5);
+            
+            newcoinsdata.save((error)=>{
+                if (error){
+                    console.log('Oops')
+            
+                } else {
+                    console.log('Worked')
+                }
+            });
+            newcoinsdata2.save((error)=>{
+                if (error){
+                    console.log('Oops')
+            
+                } else {
+                    console.log('Worked')
+                }
+            });
+            newcoinsdata3.save((error)=>{
+                if (error){
+                    console.log('Oops')
+            
+                } else {
+                    console.log('Worked')
+                }
+            });
+            newcoinsdata4.save((error)=>{
+                if (error){
+                    console.log('Oops')
+            
+                } else {
+                    console.log('Worked')
+                }
+            });
+            newcoinsdata5.save((error)=>{
+                if (error){
+                    console.log('Oops')
+            
+                } else {
+                    console.log('Worked')
+                }
+            });
+            fs.readFile(path.join(__dirname, '/', 'addcoin.html'),
+            (err, content) => {
+                            
+                            if (err) throw err;
+                            res.writeHead(200, { 'Content-Type': 'text/html' });
+                            res.end(content);
+                }
+      );
      }
     else if (req.url==='/api')
     {

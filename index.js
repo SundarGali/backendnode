@@ -37,7 +37,7 @@ const mongoose = require("mongoose");
     
     }
     const data2={
-        id:1,
+        id:2,
         name: "Bodge",
         price: 3000,
         year:1976,
@@ -45,7 +45,7 @@ const mongoose = require("mongoose");
     
     }
     const data3={
-        id:1,
+        id:3,
         name: "DEodge",
         price: 30000,
         year:2006,
@@ -53,7 +53,7 @@ const mongoose = require("mongoose");
     
     }
     const data4={
-        id:1,
+        id:4,
         name: "DQodge",
         price: 15000,
         year:2003,
@@ -61,7 +61,7 @@ const mongoose = require("mongoose");
     
     }
     const data5={
-        id:1,
+        id:5,
         name: "DGodge",
         price: 12000,
         year:2004,

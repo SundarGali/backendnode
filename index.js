@@ -31,25 +31,12 @@ const mongoose = require("mongoose");
 const server = http.createServer((req, res) => {
     
     
-    /*
-
-        
-
-        we can Navigate to different pages via different requests. 
-        if / then goto index.html
-        if /about about then goto about.html
-        if /api then laod the JSON file  /  ;) this might be something you need for your exam. 
-
-
-
-    */
-   
     
     
     if (req.url === '/') {
     
     
-        // read public.html file from public folder
+       
         fs.readFile(path.join(__dirname, '/', 'index.html'),
                     (err, content) => {
                                     
@@ -63,7 +50,7 @@ const server = http.createServer((req, res) => {
     else if (req.url === '/about') {
 
 
-        // read the about.html file public folder
+       
         fs.readFile(
             path.join(__dirname, '/', 'about.html'),
                     (err, content) => {
@@ -229,11 +216,7 @@ const server = http.createServer((req, res) => {
         res.end("<h1> 404 nothing is here</h1>");
     }
 
-    /*
-
-        But what if we have  1000 pages/urls ? do we need to write 1000 if-else statements?
-
-    /*/
+   
 });
 
 const PORT= process.env.PORT || 5959;

@@ -1,25 +1,28 @@
-{"books": [{
+
+
+
+[{
   "id":1,
-  "title": "Dodge",
+  "title": "Ethereum",
   "year": 1996,
   "published": false
 
 },
 {
   "id":2,
-  "title": "Bitcoin",
+  "title": "Cardano",
   "year": 2000,
   "published": true
 },
 {
   "id":3,
-  "title": "Demo coin three",
+  "title": "Litecoin",
   "year": 2005,
   "published": true
 },
 {
   "id":4,
-  "title": "Demo coin four",
+  "title": "Bitcoin Cash",
   "year": 2011,
   "published": true
 },
@@ -28,4 +31,4 @@
   "title": "Demo coin five",
   "year": 2022,
   "published": false
-}]}
+}]
